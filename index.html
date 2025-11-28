@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEAM Varsity - Image Captions Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .image-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+            align-items: start;
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
+        }
+        
+        .image-container {
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+        
+        .caption-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .image-number {
+            font-size: 0.9em;
+            color: #667eea;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .caption-box {
+            padding: 15px;
+            border-radius: 8px;
+            background: white;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+        
+        .caption-box:hover {
+            border-color: #667eea;
+            background: #f0f3ff;
+        }
+        
+        .caption-label {
+            font-size: 0.85em;
+            color: #6c757d;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+            display: block;
+        }
+        
+        .caption-text {
+            font-size: 1.1em;
+            color: #212529;
+            line-height: 1.6;
+        }
+        
+        .original-caption {
+            border-left: 3px solid #6c757d;
+        }
+        
+        .social-caption {
+            border-left: 3px solid #28a745;
+        }
+        
+        .social-caption .caption-text {
+            font-size: 1.2em;
+            font-weight: 500;
+            color: #28a745;
+        }
+        
+        .usage-guide {
+            background: #e7f3ff;
+            border-left: 5px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 50px;
+        }
+        
+        .usage-guide h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .usage-guide ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .usage-guide li {
+            padding: 10px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #333;
+        }
+        
+        .usage-guide li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .platform-section {
+            margin-bottom: 20px;
+        }
+        
+        .platform-section h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .platform-section ul {
+            margin-left: 20px;
+        }
+        
+        .platform-section li {
+            padding: 5px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .image-card {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 STEAM Varsity Workshop</h1>
+            <p>Social Media Caption Guide - 27 Images</p>
+        </div>
+        
+        <div class="content">
+            <!-- Image 1 -->
+            <div class="image-card">
+                <div class="image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/e77a80ef-10d8-47e4-bc4c-9fb77d0f28c8" alt="Robot Dog Demo Circle">
+                </div>
+                <div class="caption-section">
+                    <span class="image-number">Image 1</span>
+                    <div class="caption-box original-caption">
+                        <span class="caption-label">Original Caption</span>
+                        <span class="caption-text">Robotics circle session</span>
+                    </div>
+                    <div class="caption-box social-caption">
+                        <span class="caption-label">Social Media Caption</span>
+                        <span class="caption-text">🤖 Tech Circle Vibes</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 2 -->
+            <div class="image-card">
+                <div class="image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/2b7e1167-e635-46e1-8175-68ad1649c500" alt="Hands-On 3D Printer Work">
+                </div>
+                <div class="caption-section">
+                    <span class="image-number">Image 2</span>
+                    <div class="caption-box original-caption">
+                        <span class="caption-label">Original Caption</span>
+                        <span class="caption-text">Focused makers at work</span>
+                    </div>
+                    <div class="caption-box social-caption">
+                        <span class="caption-label">Social Media Caption</span>
+                        <span class="caption-text">🔧 Makers in Motion</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 3 -->
+            <div class="image-card">
+                <div class="image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/b4f06561-07eb-44a1-b66d-5d6c7a0c1cef" alt="Mentor-Led Coding Session">
+                </div>
+                <div class="caption-section">
+                    <span class="image-number">Image 3</span>
+                    <div class="caption-box original-caption">
+                        <span class="caption-label">Original Caption</span>
+                        <span class="caption-text">Mentor-led coding focus</span>
+                    </div>
+                    <div class="caption-box social-caption">
+                        <span class="caption-label">Social Media Caption</span>
+                        <span class="caption-text">👨‍🏫 Mentor Mode: ON</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 4 -->
+            <div class="image-card">
+                <div class="image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/e58dfd5b-8e76-49c6-9852-e81456dd87d8" alt="Industrial Bot Demonstration">
+                </div>
+                <div class="caption-section">
+                    <span class="image-number">Image 4</span>
+                    <div class="caption-box original-caption">
+                        <span class="caption-label">Original Caption</span>
+                        <span class="caption-text">Industrial robotics demo</span>
+                    </div>
+                    <div class="caption-box social-caption">
+                        <span class="caption-label">Social Media Caption</span>
+                        <span class="caption-text">🦾 Bot Demo Magic</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 5 -->
+            <div class="image-card">
+                <div class="image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/c5bd288d-0e9d-4c5f-87b6-ff1dce9fb53f" alt="Workshop Floor Full of Energy">
+                </div>
+                <div class="caption-section">
+                    <span class="image-number">Image 5</span>
+                    <div class="caption-box original-caption">
+                        <span class="caption-label">Original Caption</span>
+                        <span class="caption-text">Floor full of tinkerers</span>
+                    </div>
+                    <div class="caption-box social-caption">
+                        <span class="caption-label">Social Media Caption</span>
+                        <span class="caption-text">⚡ Tinkerers' Haven</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 6 -->
+            <div class="image-card">
+                <div class="image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/7c364290-ffd0-4504-a82d-437631b57391" alt="Robot Dog Live Demo">
+                </div>
+                <div class="caption-section">
+                    <span class="image-number">Image 6</span>
+                    <div class="caption-box original-caption">
+                        <span class="caption-label">Original Caption</span>
+                        <span class="caption-text">Robot dog live demo</span>
+                    </div>
+                    <div class="caption-box social-caption">
+                        <span class="caption-label">Social Media Caption</span>
+                        <span class="caption-text">🤖 Bot Takeover!</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 7 -->
+            <div class="image-card">
+                <div class="image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/5cb081e6-7698-4a94-b6cd-04a8e4c4af86" alt="Interactive Classroom Briefing">
+                </div>
+                <div class="caption-section">
+                    <span class="image-number">Image 7</span>
+                    <div class="caption-box original-caption">
+                        <span class="caption-label">Original Caption</span>
+                        <span class="caption-text">Interactive classroom briefing</span>
+                    </div>
+                    <div class="caption-box social-caption">
+                        <span class="caption-label">Social Media Caption</span>
+                        <span class="caption-text">📢 Workshop Kickoff</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 8 -->
+            <div class="image-card">
+                <div class="image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/13c98b74-13cc-4be3-8514-400a04a13893" alt="Proud Robotics Team">
+                </div>
+                <div class="caption-section">
+                    <span class="image-number">Image 8</span>
+                    <div class="caption-box original-caption">
+                        <span class="caption-label">Original Caption</span>
+                        <span class="caption-text">Proud robotics team</span>
+                    </div>
+                    <div class="caption-box social-caption">
+                        <span class="caption-label">Social Media Caption</span>
+                        <span class="caption-text">🏆 Team Victory!</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 9 -->
+            <div class="image-card">
+                <div class="image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/8836943d-f23b-4a0f-9406-d5c9dc0add04" alt="Summer Camp Coding Lab">
+                </div>
+                <div class="caption-section">
+                    <span class="image-number">Image 9</span>
+                    <div class="caption-box original-caption">
+                        <span class="caption-label">Original Caption</span>
+                        <span class="caption-text">Summer camp coding lab</span>
+                    </div>
+                    <div class="caption-box social-caption">
+                        <span class="caption-label">Social Media Caption</span>
+                        <span class="caption-text">☀️ Camp Code Crew</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 10 -->
+            <div class="image-card">
+                <div class="image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/2a0c6b9a-82e0-4bc0-a3fe-15c0027b9bed" alt="Curious Junior Coders">
+                </div>
+                <div class="caption-section">
+                    <span class="image-number">Image 10</span>
+                    <div class="caption-box original-caption">
+                        <span class="caption-label">Original Caption</span>
+                        <span class="caption-text">Curious junior coders</span>
+                    </div>
+                    <div class="caption-box social-caption">
+                        <span class="caption-label">Social Media Caption</span>
+                        <span class="caption-text">👶 Junior Hackers</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 11 -->
+            <div class="image-card">
+                <div class="image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/a31bd735-be9b-4626-abc4-278df92853cb" alt="Robotics Workshop Briefing">
+                </div>
+                <div class="caption-section">
+                    <span class="image-number">Image 11</span>
+                    <div class="caption-box original-caption">
+                        <span class="caption-label">Original Caption</span>
+                        <span class="caption-text">Robotics workshop briefing</span>
+                    </div>
+                    <div class="caption-box social-caption">
+                        <span class="caption-label">Social Media Caption</span>
+                        <span class="caption-text">🎯 Masterclass Begin</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 12 -->
+            <div class="image-card">
+                <div class="image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/a5046acd-e2fc-42cf-a03a-cfade2f36e1e" alt="Lego Coding Guidance">
+                </div>
+                <div class="caption-section">
+                    <span class="image-number">Image 12</span>
+                    <div class="caption-box original-caption">
+                        <span class="caption-label">Original Caption</span>
+                        <span class="caption-text">Lego coding guidance</span>
+                    </div>
+                    <div class="caption-box social-caption">
+                        <span class="caption-label">Social Media Caption</span>
+                        <span class="caption-text">🧱 Hands-On Coding</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 13 -->
+            <div class="image-card">
+                <div class="image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/9826fe7c-6f6f-4939-9d47-31f124c3a837" alt="Drone Programming Joy">
+                </div>
+                <div class="caption-section">
+                    <span class="image-number">Image 13</span>
+                    <div class="caption-box original-caption">
+                        <span class="caption-label">Original Caption</span>
+                        <span class="caption-text">Drone programming joy</span>
+                    </div>
+                    <div class="caption-box social-caption">
+                        <span class="caption-label">Social Media Caption</span>
+                        <span class="caption-text">🚁 Drone Code Joy</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 14 -->
+            <div class="image-card">
+                <div class="image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/fc575802-3786-49c3-abd7-846e2c9f481f" alt="Drone Controls Teamwork">
+                </div>
+                <div class="caption-section">
+                    <span class="image-number">Image 14</span>
+                    <div class="caption-box original-caption">
+                        <span class="caption-label">Original Caption</span>
+                        <span class="caption-text">Drone controls teamwork</span>
+                    </div>
+                    <div class="caption-box social-caption">
+                        <span class="caption-label">Social Media Caption</span>
+                        <span class="caption-text">👥 Teaming for Tech</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 15 -->
+            <div class="image-card">
+                <div class="image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/8b1157db-ab86-4d5e-aafe-93fae662de75" alt="First Drone Flight">
+                </div>
+                <div class="caption-section">
+                    <span class="image-number">Image 15</span>
+                    <div class="caption-box original-caption">
+                        <span class="caption-label">Original Caption</span>
+                        <span class="caption-text">First drone flight</span>
+                    </div>
+                    <div class="caption-box social-caption">
+                        <span class="caption-label">Social Media Caption</span>
+                        <span class="caption-text">🚀 First Flight!</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 16 -->
+            <div class="image-card">
+                <div class="image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/579d36b4-1ad9-43b6-94b5-47174123d991" alt="Gaming Laptop Drone Test">
+                </div>
+                <div class="caption-section">
+                    <span class="image-number">Image 16</span>
+                    <div class="caption-box original-caption">
+                        <span class="caption-label">Original Caption</span>
+                        <span class="caption-text">Gaming laptop drone test</span>
+                    </div>
+                    <div class="caption-box social-caption">
+                        <span class="caption-label">Social Media Caption</span>
+                        <span class="caption-text">💻 Game On, Drones!</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 17 -->
+            <div class="image-card">
+                <div class="image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/ae8e083c-4174-4a4b-9be3-724567e6964b" alt="Drone Setup Concentration">
+                </div>
+                <div class="caption-section">
+                    <span class="image-number">Image 17</span>
+                    <div class="caption-box original-caption">
+                        <span class="caption-label">Original Caption</span>
+                        <span class="caption-text">Drone setup concentration</span>
+                    </div>
+                    <div class="caption-box social-caption">
+                        <span class="caption-label">Social Media Caption</span>
+                        <span class="caption-text">🎮 Focus & Launch</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 18 -->
+            <div class="image-card">
+                <div class="image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/9836c991-fa9e-4122-9292-9cfe1401956b" alt="Robotics Workshop Keynote">
+                </div>
+                <div class="caption-section">
+                    <span class="image-number">Image 18</span>
+                    <div class="caption-box original-caption">
+                        <span class="caption-label">Original Caption</span>
+                        <span class="caption-text">Robotics workshop keynote</span>
+                    </div>
+                    <div class="caption-box social-caption">
+                        <span class="caption-label">Social Media Caption</span>
+                        <span class="caption-text">🎤 Workshop In Session</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 19 -->
+            <div class="image-card">
+                <div class="image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/e39a6e8e-0f20-4bb1-a351-23546c327865" alt="Girls in Red Coding">
+                </div>
+                <div class="caption-section">
+                    <span class="image-number">Image 19</span>
+                    <div class="caption-box original-caption">
+                        <span class="caption-label">Original Caption</span>
+                        <span class="caption-text">Girls in red coding</span>
+                    </div>
+                    <div class="caption-box social-caption">
+                        <span class="caption-label">Social Media Caption</span>
+                        <span class="caption-text">👩‍💻 Red Power Coders</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 20 -->
+            <div class="image-card">
+                <div class="image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/da9674ab-b51a-4841-aaca-d5c9805dda1d" alt="Colorful Lego Creation">
+                </div>
+                <div class="caption-section">
+                    <span class="image-number">Image 20</span>
+                    <div class="caption-box original-caption">
+                        <span class="caption-label">Original Caption</span>
+                        <span class="caption-text">Colorful Lego creation</span>
+                    </div>
+                    <div class="caption-box social-caption">
+                        <span class="caption-label">Social Media Caption</span>
+                        <span class="caption-text">🌈 Lego Tech Art</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 21 -->
+            <div class="image-card">
+                <div class="image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/712bca13-9147-46df-9cd4-21fa1639732e" alt="Drone Build Collaboration">
+                </div>
+                <div class="caption-section">
+                    <span class="image-number">Image 21</span>
+                    <div class="caption-box original-caption">
+                        <span class="caption-label">Original Caption</span>
+                        <span class="caption-text">Drone build collaboration</span>
+                    </div>
+                    <div class="caption-box social-caption">
+                        <span class="caption-label">Social Media Caption</span>
+                        <span class="caption-text">✈️ Drone Squad Build</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 22 -->
+            <div class="image-card">
+                <div class="image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/10114766-3c04-47d1-97f6-d906e10355cb" alt="Lego Robot Prototype">
+                </div>
+                <div class="caption-section">
+                    <span class="image-number">Image 22</span>
+                    <div class="caption-box original-caption">
+                        <span class="caption-label">Original Caption</span>
+                        <span class="caption-text">Lego robot prototype</span>
+                    </div>
+                    <div class="caption-box social-caption">
+                        <span class="caption-label">Social Media Caption</span>
+                        <span class="caption-text">🤖 Build & Battle</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 23 -->
+            <div class="image-card">
+                <div class="image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/64cba0b2-d634-4d4f-b529-9e12e5573342" alt="Interactive Lego Exhibit">
+                </div>
+                <div class="caption-section">
+                    <span class="image-number">Image 23</span>
+                    <div class="caption-box original-caption">
+                        <span class="caption-label">Original Caption</span>
+                        <span class="caption-text">Interactive Lego exhibit</span>
+                    </div>
+                    <div class="caption-box social-caption">
+                        <span class="caption-label">Social Media Caption</span>
+                        <span class="caption-text">🎨 Innovation Unleashed</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 24 -->
+            <div class="image-card">
+                <div class="image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/9aa5ebf5-8cb7-4040-a6ab-44c97280b670" alt="Creative Lego Mechanisms">
+                </div>
+                <div class="caption-section">
+                    <span class="image-number">Image 24</span>
+                    <div class="caption-box original-caption">
+                        <span class="caption-label">Original Caption</span>
+                        <span class="caption-text">Creative Lego mechanisms</span>
+                    </div>
+                    <div class="caption-box social-caption">
+                        <span class="caption-label">Social Media Caption</span>
+                        <span class="caption-text">⚙️ Creative Circuits</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 25 -->
+            <div class="image-card">
+                <div class="image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/6672b262-cc7b-4595-af7d-d0dc68e72c4f" alt="Student-Built Lego Showcase">
+                </div>
+                <div class="caption-section">
+                    <span class="image-number">Image 25</span>
+                    <div class="caption-box original-caption">
+                        <span class="caption-label">Original Caption</span>
+                        <span class="caption-text">Student-built Lego showcase</span>
+                    </div>
+                    <div class="caption-box social-caption">
+                        <span class="caption-label">Social Media Caption</span>
+                        <span class="caption-text">🌟 Next-Gen Engineers</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 26 -->
+            <div class="image-card">
+                <div class="image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/46211488-21f8-49ec-8244-801710338079" alt="Project Showcase Moment">
+                </div>
+                <div class="caption-section">
+                    <span class="image-number">Image 26</span>
+                    <div class="caption-box original-caption">
+                        <span class="caption-label">Original Caption</span>
+                        <span class="caption-text">Project showcase moment</span>
+                    </div>
+                    <div class="caption-box social-caption">
+                        <span class="caption-label">Social Media Caption</span>
+                        <span class="caption-text">🎯 Project Showcase</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image 27 -->
+            <div class="image-card">
+                <div class="image-container">
+                    <img src="https://agi-prod-file-upload-public-main-use1.s3.amazonaws.com/5a8e2b0e-2e83-4600-bda6-78050b96553a" alt="Builder's Lab">
+                </div>
+                <div class="caption-section">
+                    <span class="image-number">Image 27</span>
+                    <div class="caption-box original-caption">
+                        <span class="caption-label">Original Caption</span>
+                        <span class="caption-text">Builder's lab</span>
+                    </div>
+                    <div class="caption-box social-caption">
+                        <span class="caption-label">Social Media Caption</span>
+                        <span class="caption-text">🛠️ Builder's Lab</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Usage Guide -->
+            <div class="usage-guide">
+                <h2>📱 Platform Usage Guide</h2>
+                
+                <div class="platform-section">
+                    <h3>Instagram / Facebook</h3>
+                    <ul>
+                        <li>Use the "Social Media Caption" version with emojis</li>
+                        <li>Add relevant hashtags: #STEAMVarsity #Robotics #Makers #FutureEngineers #TechWorkshop #Innovation</li>
+                        <li>Post 2-3 times per week for consistent engagement</li>
+                        <li>Best time: Evening 6-9 PM IST</li>
+                    </ul>
+                </div>
+                
+                <div class="platform-section">
+                    <h3>LinkedIn</h3>
+                    <ul>
+                        <li>Use cleaner captions without excessive emojis</li>
+                        <li>Focus on learning outcomes and skill development</li>
+                        <li>Highlight mentorship and innovation</li>
+                        <li>Use professional tone to reach recruiters and corporate partners</li>
+                    </ul>
+                </div>
+                
+                <div class="platform-section">
+                    <h3>TikTok / Reels / YouTube Shorts</h3>
+                    <ul>
+                        <li>Keep captions super short and punchy</li>
+                        <li>Use trending sounds and transitions</li>
+                        <li>Focus on the action and energy in each frame</li>
+                        <li>Add call-to-action: "Tag someone who should join! 👇"</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>✨ STEAM Varsity Workshop - Social Media Content Guide 2025</p>
+        </div>
+    </div>
+</body>
+</html>
